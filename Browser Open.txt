@@ -1,0 +1,33 @@
+package selenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Locators {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		System.setProperty("WebDriver.Chrome.driver","E:\\Drivers\\chromedriver-win64\\chromedriver-win64");
+		WebDriver driver=new ChromeDriver();
+		
+		driver.get("https://www.facebook.com/");
+		
+		driver.findElement(By.cssSelector("#email")).sendKeys("gowthamsam");
+		
+//		driver.findElement(By.id("email")).sendKeys("gowthamsam");
+		
+		driver.findElement(By.id("pass")).sendKeys("1232465asdf");
+		Thread.sleep(5000);
+		
+		driver.findElement(By.name("login")).click();
+		
+		System.out.println("Its logged in");
+//		driver.close();
+		
+//	-------------------------------------------------------------------
+		
+//		driver.findElement(By.cssSelector("#email")).sendKeys("gowthamsam");
+		
+		
+}}
